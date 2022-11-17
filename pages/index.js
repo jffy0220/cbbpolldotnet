@@ -210,23 +210,23 @@ export default function Home(props) {
   
       </div>
     ) :  (
-      <div style={{backgroundColor: "#cbeff2"}}> {/* What does the homepage styling do? */}
+      <div style={{backgroundColor: '#000'}}> {/* What does the homepage styling do? */}
         <NavbarTest />
         <Container fluid>
-          <Row>
-            <Col sm={3}>
-              <VotingInformation />
-            </Col>
-            <Col sm={6}>
+          <Row style={{marginTop: '2%'}}>
+            <Col sm={9}>
               <TableBody />
             </Col>
             <Col sm={3}>
-              <SponsorshipInformation />
-              <br /><br /><br /><br />
+              <VotingInformation />
+              <br /><br />
               <Ballots />
+              <br /><br />
+              
             </Col>
           </Row>
         </Container>
+        <SponsorshipInformation />
       </div>      
           
     );

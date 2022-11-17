@@ -241,10 +241,13 @@ const otherReceivingVotes = [
 export default function TableBody(props) {
    return (
         <>
-            <Table striped bordered variant='light'>
+            <Table striped bordered hover variant='light' style={{
+                fontWeight: "bold",
+                cursor: "pointer"
+            }}>
                 <thead>
                     <tr>
-                        <th>Rank</th>
+                        <th className="text-end">Rank</th>
                         <th>Team(First Place Votes)</th>
                         <th>Points</th>
                     </tr>
@@ -253,11 +256,11 @@ export default function TableBody(props) {
                     {testData.map((team, i) => {
                         return (
                             <tr key={i}>
-                                <td>{team.rank}</td>
+                                <td className="text-end">{team.rank}</td>
                                 <td>
                                     <img src={team.logo} height="30" width="30" alt={team.teamName} /> 
                                     <span style={{paddingLeft: "5px"}}>{team.teamName}</span>
-                                    { team.firstPlaceVotes > 0 ? `(${team.firstPlaceVotes})` : ''}
+                                    { team.firstPlaceVotes > 0 ? `  (${team.firstPlaceVotes})` : ''}
                                 </td>
                                 <td>{team.points}</td>
                             </tr>
@@ -265,7 +268,10 @@ export default function TableBody(props) {
                     })}
                 </tbody>
             </Table>
-            <p>
+            <p style={{
+                fontWeight: "bold",
+                color: "#FFFFF2"
+            }}>
                 Other Receiving Votes:
                 {otherReceivingVotes.map((team, i) => {
                     return ` ${team.team} ${team.votes}, `;

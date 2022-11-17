@@ -24,7 +24,11 @@ export default function Ballots(props) {
         {
             teamImage: "/static/D1/Houston.png",
             user: "BRNXB0MBERS"
-        }
+        },
+        {
+            teamImage: "/static/D1/Houston.png",
+            user: "BRNXB0MBERS"
+        },
     ]);
     const [ provisionalBallots, setProvisionalBallots ] = React.useState([
         {

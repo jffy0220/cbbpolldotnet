@@ -2,9 +2,18 @@ import React from 'react';
 import { Nav, Navbar, Container, Form, Button } from 'react-bootstrap';
 
 export default function NavbarTest(props) {
+
+    const bgStyle = {
+        backgroundColor: "#85514b"
+    }
+
+    const gradient = {
+        backgroundImage: "linear-gradient(100deg, #fff 50%, #777 100%);"
+    }
+
     return (
         <>
-            <Navbar className="mb-3" bg="light">
+            <Navbar className="navbarColor" variant="light">
                 <Container fluid>
                     <Navbar.Brand href="#">
                         <img
@@ -18,12 +27,9 @@ export default function NavbarTest(props) {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse  id="basic-navbar-nav">
                         <Nav className="me-auto justify-content-end">
-                            <Nav.Link href="#">Home</Nav.Link>
-                            <Nav.Link href="#">About</Nav.Link>
+                            <Nav.Link href="#" style={{fontWeight: "bold", color: "#000"}}>Home</Nav.Link>
+                            <Nav.Link href="#" style={{fontWeight: "bold", color: "#000"}}>About</Nav.Link>
                         </Nav>
-                        <Form className="d-flex">
-                            <Button variant="primary">Sign In With Reddit</Button>
-                        </Form>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

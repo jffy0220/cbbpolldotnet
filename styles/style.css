@@ -4,8 +4,7 @@
 }
 
 html {
-    background-color: #cbeff2;
-    
+    background-color: #000;
 }
 
 body {
@@ -242,4 +241,11 @@ button{
 }
 .fixedImage{
     min-width: 100%;
+}
+
+
+/* Starting Updated Styling Here */
+
+.navbarColor {
+    background-image: linear-gradient(115deg, #fff 25%, #777 30%);
 }
