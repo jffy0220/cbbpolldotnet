@@ -17,6 +17,7 @@ import TableBody from "../components/Table/Table";
 import { Container, Row, Col } from "react-bootstrap";
 import VotingInformation from "../components/VotingInfo";
 import SponsorshipInformation from "../components/SponsorshipInfo";
+import Ballots from "../components/ballots";
 
 const DURATION = "permanent";
 const SCOPE = "identity";
@@ -221,6 +222,8 @@ export default function Home(props) {
             </Col>
             <Col sm={3}>
               <SponsorshipInformation />
+              <br /><br /><br /><br />
+              <Ballots />
             </Col>
           </Row>
         </Container>

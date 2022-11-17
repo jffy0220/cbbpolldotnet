@@ -179,33 +179,98 @@ const testData = [
     },
 ]
 
+const otherReceivingVotes = [
+    {
+        team: "Texas A&M",
+        votes: 287
+    },
+    {
+        team: "Purdue",
+        votes: 285
+    },
+    {
+        team: "Saint Mary's",
+        votes: 251
+    },
+    {
+        team: "Iowa",
+        votes: 181
+    },
+    {
+        team: "Xavier",
+        votes: 148
+    },
+    {
+        team: "Virginia Tech",
+        votes: 138
+    },
+    {
+        team: "Miami (FL)",
+        votes: 122
+    },
+    {
+        team: "Villanova",
+        votes: 119
+    },
+    {
+        team: "Saint Louis",
+        votes: 92
+    },
+    {
+        team: "Wisconsin",
+        votes: 74
+    },
+    {
+        team: "Ohio State",
+        votes: 67
+    },
+    {
+        team: "Memphis",
+        votes: 50
+    },
+    {
+        team: "Florida",
+        votes: 41
+    },
+    {
+        team: "James Madison",
+        votes: 40
+    },
+]
+
 export default function TableBody(props) {
    return (
-    <>
-        <Table striped bordered variant='light'>
-            <thead>
-                <tr>
-                    <th>Rank</th>
-                    <th>Team(First Place Votes)</th>
-                    <th>Points</th>
-                </tr>
-            </thead>
-            <tbody>
-                {testData.map((team, i) => {
-                    return (
-                        <tr key={i}>
-                            <td>{team.rank}</td>
-                            <td>
-                                <img src={team.logo} height="30" width="30" alt={team.teamName} /> 
-                                {team.teamName}
-                                { team.firstPlaceVotes > 0 ? `(${team.firstPlaceVotes})` : ''}
-                            </td>
-                            <td>{team.points}</td>
-                        </tr>
-                    )
+        <>
+            <Table striped bordered variant='light'>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Team(First Place Votes)</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {testData.map((team, i) => {
+                        return (
+                            <tr key={i}>
+                                <td>{team.rank}</td>
+                                <td>
+                                    <img src={team.logo} height="30" width="30" alt={team.teamName} /> 
+                                    <span style={{paddingLeft: "5px"}}>{team.teamName}</span>
+                                    { team.firstPlaceVotes > 0 ? `(${team.firstPlaceVotes})` : ''}
+                                </td>
+                                <td>{team.points}</td>
+                            </tr>
+                        )
+                    })}
+                </tbody>
+            </Table>
+            <p>
+                Other Receiving Votes:
+                {otherReceivingVotes.map((team, i) => {
+                    return ` ${team.team} ${team.votes}, `;
                 })}
-            </tbody>
-        </Table>
-    </>
+            </p>
+        </>
    )
 }

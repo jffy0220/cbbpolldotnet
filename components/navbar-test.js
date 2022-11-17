@@ -1,15 +1,10 @@
 import React from 'react';
 import { Nav, Navbar, Container, Form, Button } from 'react-bootstrap';
 
-const navStyle = {
-    backgroundImage: `url(/static/navbar/bannerBackground.png)`,
-    height: "100px"
-}
-
 export default function NavbarTest(props) {
     return (
         <>
-            <Navbar style={navStyle} expand="lg" className="mb-3">
+            <Navbar className="mb-3" bg="light">
                 <Container fluid>
                     <Navbar.Brand href="#">
                         <img
