@@ -12,6 +12,12 @@ import TeamRow from "../components/pollrow";
 import { connectMongo } from "../utils/connect";
 // import { getSeason } from "../utils/getDates";
 import Link from 'next/link';
+import NavbarTest from "../components/navbar-test";
+import TableBody from "../components/Table/Table";
+import { Container, Row, Col } from "react-bootstrap";
+import VotingInformation from "../components/VotingInfo";
+import SponsorshipInformation from "../components/SponsorshipInfo";
+import Ballots from "../components/ballots";
 
 const DURATION = "permanent";
 const SCOPE = "identity";
@@ -161,6 +167,9 @@ export default function Home(props) {
     userCheck = false;
   }
 
+  // 3 checks for what to return
+  // poll date, today, and userCheck
+
 
 
   if(today >= pollDate || modlist.includes(userCheck)){
@@ -173,7 +182,7 @@ export default function Home(props) {
           <div id="ballotBox">
                 <h3>Vote for Week 2!</h3>
               <a href={'/ballotBox'}>
-                <button>VOTE NOW</button>          
+                <button>VOTE NOW</button>    
               </a>
               <h3>Week 2 closes Monday, November 14, at 9:59am EST</h3>
           </div>
@@ -200,39 +209,26 @@ export default function Home(props) {
         </div>  
   
       </div>
-    ) :  (    
-      <div className="homepage">
-        
-        <Navbar cbbLogo="/static/CBBlogo2.png" homefieldLogo="/static/SponsoredByHomefield.png"></Navbar>
-        <div className="content">  
-          <div id="ballotBox">
-                <h3>Vote in the poll!</h3>
-                <h3>Sign in!</h3>
-              <a href={URL}>
-                <button>Sign in with Reddit</button>          
-              </a>
-              <h3>Voting opens at 10AM EST every Saturday</h3>
-          </div>
-          <div id="pollTable">
-            <h1>Week {week} Poll</h1>
-            <table>
-              <tbody>
-                <tr>
-                  <th>Rank</th>
-                  <th>Team (#1 Votes)</th>
-                  <th>Points</th>
-                </tr>
-                {rowArray.map(row => row)}              
-              </tbody>
-            </table>    
-            <span className="boldText">Others Receiving Votes:</span> {othersReceivingVotes}
-            <h2>Official Ballots</h2>
-            {pollVoterArray.map(voter => voter)}
-            <h2>Provisional Ballots</h2>
-            {provisionalVoterArray.map(voter => voter)}    
-          </div>
-        </div>  
-      </div>
+    ) :  (
+      <div style={{backgroundColor: '#000'}}> {/* What does the homepage styling do? */}
+        <NavbarTest />
+        <Container fluid>
+          <Row style={{marginTop: '2%'}}>
+            <Col sm={9}>
+              <TableBody />
+            </Col>
+            <Col sm={3}>
+              <VotingInformation />
+              <br /><br />
+              <Ballots />
+              <br /><br />
+              
+            </Col>
+          </Row>
+        </Container>
+        <SponsorshipInformation />
+      </div>      
+          
     );
   }
   else if(today < pollDate){

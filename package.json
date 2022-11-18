@@ -11,14 +11,14 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
-    "bootstrap": "^5.2.1",
+    "bootstrap": "^5.2.2",
     "cookies-next": "^2.1.1",
     "dotenv": "^16.0.2",
     "mongoose": "^6.6.1",
     "next": "^12.2.5",
     "randomstring": "^1.2.2",
     "react": "18.2.0",
-    "react-bootstrap": "^2.5.0",
+    "react-bootstrap": "^2.6.0",
     "react-dom": "18.2.0",
     "react-router-dom": "^6.4.2",
     "react-select": "^5.4.0"

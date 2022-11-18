@@ -32,3 +32,16 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+# Hey! 
+
+## My name is Justin, I saw that this project was open source on r/collegebasketball and I wanted to help out
+
+I currently work as a software engineer and don't mind helping out if you'd like. 
+
+If you don't want me to contribute, just send me a message /u/shyxdash or @ justin.farley94@gmail.com
+
+I'd love to get a thread started to discuss some of the things you want to see in the site, just let me know. 
+
+Thank you!
+
