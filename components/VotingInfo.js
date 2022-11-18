@@ -9,7 +9,7 @@ export default function VotingInformation(props) {
             <Card>
                 <Card.Body>
                     <Card.Title><h2>Vote!</h2></Card.Title>
-                    <Card.Text><h5>Voting Opens at 10:00 AM EST every Saturday</h5></Card.Text>
+                    <Card.Text>Voting Opens at 10:00 AM EST every Saturday</Card.Text>
                     <Card.Text>
                         <Button variant="primary">Sign In With Reddit</Button>
                     </Card.Text>
