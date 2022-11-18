@@ -10,7 +10,7 @@ import TeamData from "../models/TeamData";
 //import Userpoll from "../models/Userpoll";
 import TeamRow from "../components/pollrow";
 import { connectMongo } from "../utils/connect";
-// import { getHomePageDates } from "../utils/getDates";
+// import { getSeason } from "../utils/getDates";
 import Link from 'next/link';
 import NavbarTest from "../components/navbar-test";
 import TableBody from "../components/Table/Table";
@@ -78,7 +78,7 @@ export default function Home(props) {
     //console.log('userpoll');
     let userpollData = {
       week: "Pre-Season",
-      season: "2023",
+      season: 2023,
       poll: userpoll 
     }
     addPoll(userpollData); 
